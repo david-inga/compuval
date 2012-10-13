@@ -44,7 +44,13 @@ class VentaController < ApplicationController
   # POST /venta.json
   def create
     @ventum = Ventum.new(params[:ventum])
-
+     logger.info(">>>")
+      logger.info(params[:ventum][:producto])
+    @productos = Producto.where("nombre = ?", params[:ventum][:producto])
+    logger.info(@productos)
+    logger.info(@productos.first)
+    @productos.first.stock = @productos.first.stock - @ventum.cantidad
+    @productos.first.save
     respond_to do |format|
       if @ventum.save
         format.html { redirect_to @ventum, notice: 'Ventum was successfully created.' }
