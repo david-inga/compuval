@@ -1,0 +1,29 @@
+<h1>Listing venta</h1>
+
+<table>
+  <tr>
+    <th>Comprador</th>
+    <th>Producto</th>
+    <th>Cantidad</th>
+    <th>Montototal</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @venta.each do |ventum| %>
+  <tr>
+    <td><%= ventum.comprador %></td>
+    <td><%= ventum.producto %></td>
+    <td><%= ventum.cantidad %></td>
+    <td><%= ventum.montoTotal %></td>
+    <td><%= link_to 'Show', ventum %></td>
+    <td><%= link_to 'Edit', edit_ventum_path(ventum) %></td>
+    <td><%= link_to 'Destroy', ventum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ventum', new_ventum_path %>

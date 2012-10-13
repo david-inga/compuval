@@ -1,0 +1,2 @@
+module CuentaPorCobrarsHelper
+end

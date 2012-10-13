@@ -1,0 +1,25 @@
+<h1>Listing familia_productos</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @familia_productos.each do |familia_producto| %>
+  <tr>
+    <td><%= familia_producto.nombre %></td>
+    <td><%= familia_producto.descripcion %></td>
+    <td><%= link_to 'Show', familia_producto %></td>
+    <td><%= link_to 'Edit', edit_familia_producto_path(familia_producto) %></td>
+    <td><%= link_to 'Destroy', familia_producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Familia producto', new_familia_producto_path %>

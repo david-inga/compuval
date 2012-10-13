@@ -1,0 +1,31 @@
+<h1>Listing cuenta_por_cobrars</h1>
+
+<table>
+  <tr>
+    <th>Empresa</th>
+    <th>Numerodocumento</th>
+    <th>Monto</th>
+    <th>Fechaemision</th>
+    <th>Fechavencimiento</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cuenta_por_cobrars.each do |cuenta_por_cobrar| %>
+  <tr>
+    <td><%= cuenta_por_cobrar.empresa %></td>
+    <td><%= cuenta_por_cobrar.numeroDocumento %></td>
+    <td><%= cuenta_por_cobrar.monto %></td>
+    <td><%= cuenta_por_cobrar.fechaEmision %></td>
+    <td><%= cuenta_por_cobrar.fechaVencimiento %></td>
+    <td><%= link_to 'Show', cuenta_por_cobrar %></td>
+    <td><%= link_to 'Edit', edit_cuenta_por_cobrar_path(cuenta_por_cobrar) %></td>
+    <td><%= link_to 'Destroy', cuenta_por_cobrar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cuenta por cobrar', new_cuenta_por_cobrar_path %>

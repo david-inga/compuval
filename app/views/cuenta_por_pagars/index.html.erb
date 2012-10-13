@@ -1,0 +1,31 @@
+<h1>Listing cuenta_por_pagars</h1>
+
+<table>
+  <tr>
+    <th>Empresa</th>
+    <th>Numerodocumento</th>
+    <th>Monto</th>
+    <th>Fechaemision</th>
+    <th>Fechavencimiento</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cuenta_por_pagars.each do |cuenta_por_pagar| %>
+  <tr>
+    <td><%= cuenta_por_pagar.empresa %></td>
+    <td><%= cuenta_por_pagar.numeroDocumento %></td>
+    <td><%= cuenta_por_pagar.monto %></td>
+    <td><%= cuenta_por_pagar.fechaEmision %></td>
+    <td><%= cuenta_por_pagar.fechaVencimiento %></td>
+    <td><%= link_to 'Show', cuenta_por_pagar %></td>
+    <td><%= link_to 'Edit', edit_cuenta_por_pagar_path(cuenta_por_pagar) %></td>
+    <td><%= link_to 'Destroy', cuenta_por_pagar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cuenta por pagar', new_cuenta_por_pagar_path %>

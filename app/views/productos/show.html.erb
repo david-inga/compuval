@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @producto.fampro %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @producto.nombre %>
+</p>
+
+<p>
+  <b>Precio:</b>
+  <%= @producto.precio %>
+</p>
+
+<p>
+  <b>Garantia:</b>
+  <%= @producto.garantia %>
+</p>
+
+<p>
+  <b>Stock:</b>
+  <%= @producto.stock %>
+</p>
+
+<p>
+  <b>Stockoptimo:</b>
+  <%= @producto.stockOptimo %>
+</p>
+
+<p>
+  <b>Margen:</b>
+  <%= @producto.margen %>
+</p>
+
+
+<%= link_to 'Edit', edit_producto_path(@producto) %> |
+<%= link_to 'Back', productos_path %>

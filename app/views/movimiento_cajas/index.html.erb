@@ -1,0 +1,27 @@
+<h1>Listing movimiento_cajas</h1>
+
+<table>
+  <tr>
+    <th>Tipo</th>
+    <th>Descripcion</th>
+    <th>Monto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @movimiento_cajas.each do |movimiento_caja| %>
+  <tr>
+    <td><%= movimiento_caja.tipo %></td>
+    <td><%= movimiento_caja.descripcion %></td>
+    <td><%= movimiento_caja.monto %></td>
+    <td><%= link_to 'Show', movimiento_caja %></td>
+    <td><%= link_to 'Edit', edit_movimiento_caja_path(movimiento_caja) %></td>
+    <td><%= link_to 'Destroy', movimiento_caja, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Movimiento caja', new_movimiento_caja_path %>

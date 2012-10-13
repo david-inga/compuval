@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  empresa: MyString
+  numeroDocumento: 
+  monto: 9.99
+  fechaEmision: 
+  fechaVencimiento: 
+
+two:
+  empresa: MyString
+  numeroDocumento: 
+  monto: 9.99
+  fechaEmision: 
+  fechaVencimiento: 

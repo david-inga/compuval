@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Empresa:</b>
+  <%= @cuenta_por_cobrar.empresa %>
+</p>
+
+<p>
+  <b>Numerodocumento:</b>
+  <%= @cuenta_por_cobrar.numeroDocumento %>
+</p>
+
+<p>
+  <b>Monto:</b>
+  <%= @cuenta_por_cobrar.monto %>
+</p>
+
+<p>
+  <b>Fechaemision:</b>
+  <%= @cuenta_por_cobrar.fechaEmision %>
+</p>
+
+<p>
+  <b>Fechavencimiento:</b>
+  <%= @cuenta_por_cobrar.fechaVencimiento %>
+</p>
+
+
+<%= link_to 'Edit', edit_cuenta_por_cobrar_path(@cuenta_por_cobrar) %> |
+<%= link_to 'Back', cuenta_por_cobrars_path %>
