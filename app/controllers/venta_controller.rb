@@ -1,6 +1,6 @@
 class VentaController < ApplicationController
   # GET /venta
-  # GET /venta.json
+ 
   def index
     @venta = Ventum.all
 
