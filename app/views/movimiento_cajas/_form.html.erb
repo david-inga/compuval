@@ -10,11 +10,14 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :tipo %><br />
-    <%= f.text_field :tipo %>
+    <div class="field">
+<select name="movimiento_caja[tipo]" id="moviment_caja_tipo">
+	<option value="--">--</option>
+    <option value="Entrada">Entrada</option>
+    <option value="Salida">Salida</option>
+</select>
   </div>
+
   <div class="field">
     <%= f.label :descripcion %><br />
     <%= f.text_field :descripcion %>

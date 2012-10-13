@@ -12,8 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :empresa %><br />
-    <%= f.text_field :empresa %>
+   Empresa </br>
+  <select name="cuenta_por_cobrar[empresa]" id="cuenta_por_cobrar_empresa">
+	<option value="--">--</option>
+	<% @listado_empresas.each do |empresa| %>
+	   <option value="<%=empresa.nombre%>"><%=empresa.nombre%></option>
+	<% end %>
+  </select>
   </div>
   <div class="field">
     <%= f.label :numeroDocumento %><br />
@@ -25,11 +30,11 @@
   </div>
   <div class="field">
     <%= f.label :fechaEmision %><br />
-    <%= f.text_field :fechaEmision %>
+    <%= f.date_select :fechaEmision %>
   </div>
   <div class="field">
     <%= f.label :fechaVencimiento %><br />
-    <%= f.text_field :fechaVencimiento %>
+    <%= f.date_select :fechaVencimiento %>
   </div>
   <div class="actions">
     <%= f.submit %>

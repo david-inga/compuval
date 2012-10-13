@@ -25,7 +25,7 @@ class CuentaPorPagarsController < ApplicationController
   # GET /cuenta_por_pagars/new.json
   def new
     @cuenta_por_pagar = CuentaPorPagar.new
-
+    @listado_empresas = Empresa.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @cuenta_por_pagar }
@@ -35,13 +35,13 @@ class CuentaPorPagarsController < ApplicationController
   # GET /cuenta_por_pagars/1/edit
   def edit
     @cuenta_por_pagar = CuentaPorPagar.find(params[:id])
+    @listado_empresas = Empresa.all
   end
 
   # POST /cuenta_por_pagars
   # POST /cuenta_por_pagars.json
   def create
-    @cuenta_por_pagar = CuentaPorPagar.new(params[:cuenta_por_pagar])
-
+    @cuenta_por_pagar = CuentaPorPagar.new(params[:cuenta_por_pagar])    
     respond_to do |format|
       if @cuenta_por_pagar.save
         format.html { redirect_to @cuenta_por_pagar, notice: 'Cuenta por pagar was successfully created.' }

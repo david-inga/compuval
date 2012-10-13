@@ -31,10 +31,14 @@
     <%= f.label :correo %><br />
     <%= f.text_field :correo %>
   </div>
-  <div class="field">
-    <%= f.label :tipo %><br />
-    <%= f.text_field :tipo %>
-  </div>
+   <div class="field">
+   	Tipo<br/>
+<select name="empresa[tipo]" id="moviment_caja_tipo">
+	<option value="--">--</option>
+    <option value="Proveedor">Proveedor</option>
+    <option value="Comprador">Comprador</option>
+</select>  
+</div>
   <div class="actions">
     <%= f.submit %>
   </div>

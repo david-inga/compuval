@@ -1,4 +1,4 @@
-<h1>Listing familia_productos</h1>
+<h1>Listado de Familias de Productos</h1>
 
 <table>
   <tr>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= familia_producto.nombre %></td>
     <td><%= familia_producto.descripcion %></td>
-    <td><%= link_to 'Show', familia_producto %></td>
-    <td><%= link_to 'Edit', edit_familia_producto_path(familia_producto) %></td>
-    <td><%= link_to 'Destroy', familia_producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', familia_producto %></td>
+    <td><%= link_to 'Editar', edit_familia_producto_path(familia_producto) %></td>
+    <td><%= link_to 'Eliminar', familia_producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Familia producto', new_familia_producto_path %>
+<%= link_to 'Nueva Familia de Productos', new_familia_producto_path %>

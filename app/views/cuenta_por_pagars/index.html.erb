@@ -1,4 +1,4 @@
-<h1>Listing cuenta_por_pagars</h1>
+<h1>Listado de Cuentas por Pagar</h1>
 
 <table>
   <tr>
@@ -19,9 +19,9 @@
     <td><%= cuenta_por_pagar.monto %></td>
     <td><%= cuenta_por_pagar.fechaEmision %></td>
     <td><%= cuenta_por_pagar.fechaVencimiento %></td>
-    <td><%= link_to 'Show', cuenta_por_pagar %></td>
-    <td><%= link_to 'Edit', edit_cuenta_por_pagar_path(cuenta_por_pagar) %></td>
-    <td><%= link_to 'Destroy', cuenta_por_pagar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', cuenta_por_pagar %></td>
+    <td><%= link_to 'Editar', edit_cuenta_por_pagar_path(cuenta_por_pagar) %></td>
+    <td><%= link_to 'Eliminar', cuenta_por_pagar, method: :delete, data: { confirm: 'Pulse aceptar para eliminar registro' } %></td>
   </tr>
 <% end %>
 </table>

@@ -12,6 +12,7 @@
   <% end %>
   
   <div class="field">
+   Comprador </br>
   <select name="ventum[comprador]" id="ventum_comprador">
 	<option value="--">--</option>
 	<% @listado_empresas.each do |empresa| %>
@@ -21,13 +22,15 @@
   </div>
 
   <div class="field">
-    <%= f.label :comprador %><br />
-    <%= f.text_field :comprador %>
+   Producto </br>
+  <select name="ventum[producto]" id="ventum_producto">
+	<option value="--">--</option>
+	<% @listado_productos.each do |producto| %>
+	   <option value="<%=producto.nombre%>"><%=producto.nombre%></option>
+	<% end %>
+  </select>
   </div>
-  <div class="field">
-    <%= f.label :producto %><br />
-    <%= f.text_field :producto %>
-  </div>
+
   <div class="field">
     <%= f.label :cantidad %><br />
     <%= f.number_field :cantidad %>

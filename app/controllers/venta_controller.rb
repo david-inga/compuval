@@ -25,7 +25,8 @@ class VentaController < ApplicationController
   # GET /venta/new.json
   def new
     @ventum = Ventum.new
-    @listadoEmpresas = Empresa.all
+    @listado_empresas = Empresa.all
+    @listado_productos = Producto.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @ventum }
@@ -35,7 +36,8 @@ class VentaController < ApplicationController
   # GET /venta/1/edit
   def edit
     @ventum = Ventum.find(params[:id])
-    @listadoEmpresas = Empresa.all
+    @listado_empresas = Empresa.all
+    @listado_productos = Producto.all
   end
 
   # POST /venta

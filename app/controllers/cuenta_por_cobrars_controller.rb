@@ -25,7 +25,7 @@ class CuentaPorCobrarsController < ApplicationController
   # GET /cuenta_por_cobrars/new.json
   def new
     @cuenta_por_cobrar = CuentaPorCobrar.new
-
+    @listado_empresas = Empresa.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @cuenta_por_cobrar }
@@ -34,6 +34,7 @@ class CuentaPorCobrarsController < ApplicationController
 
   # GET /cuenta_por_cobrars/1/edit
   def edit
+    @listado_empresas = Empresa.all
     @cuenta_por_cobrar = CuentaPorCobrar.find(params[:id])
   end
 
